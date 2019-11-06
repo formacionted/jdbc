@@ -31,12 +31,15 @@ public class Jdbc0Select {
 			resultSet = statement.executeQuery(SQL_QUERY);
 			System.out.println("TOTAL COLUMN NUMBER: " + resultSet.getMetaData().getColumnCount());
 
+			// 3 - Mostrar resultados
 			int rowNumber = 0;
 			while (resultSet.next()) {
 				rowNumber++;
 				System.out.print("{Registro " + rowNumber + ": ");
-				for (int i = 1; i <= resultSet.getMetaData().getColumnCount(); i++)
-					System.out.print("[" + resultSet.getString(i) + "]    ");
+				for (int i = 1; i <= resultSet.getMetaData().getColumnCount(); i++) {
+					String valor = resultSet.getString(i);
+					System.out.print("[".concat(valor).concat("]"));
+				}
 				System.out.println("}");
 			}
 

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-import com.mysql.cj.jdbc.Driver;
+//import com.mysql.cj.jdbc.Driver;
 
 /*
 
@@ -103,9 +103,9 @@ public class JdbcExercise1 {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 	}
 	
-	private static void registerDriverByMethod() throws SQLException {
-		Driver driver = new com.mysql.cj.jdbc.Driver();
-		DriverManager.registerDriver( driver );
-	}
+//	private static void registerDriverByMethod() throws SQLException {
+//		Driver driver = new com.mysql.cj.jdbc.Driver();
+//		DriverManager.registerDriver( driver );
+//	}
 
 }
